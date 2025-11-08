@@ -1,4 +1,4 @@
-package pt.miguel.generics.exercise2;
+package pt.miguel.generics.exercise5;
 
 public class Ponto <T,S extends T> {
     T p1;

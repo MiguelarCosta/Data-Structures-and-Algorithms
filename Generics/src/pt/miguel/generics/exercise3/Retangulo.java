@@ -1,4 +1,4 @@
-package pt.miguel.generics.exercise2;
+package pt.miguel.generics.exercise3;
 
 public class Retangulo extends Figura{
 

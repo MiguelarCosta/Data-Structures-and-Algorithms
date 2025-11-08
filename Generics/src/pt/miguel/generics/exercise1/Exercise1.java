@@ -1,7 +1,6 @@
-package pt.miguel.generics;
+package pt.miguel.generics.exercise1;
 
-public class Main {
-
+public class Exercise1 {
     /**
      * Check if a generic type value is repeated in a given array, compares by reference.
      *
@@ -22,19 +21,7 @@ public class Main {
         return false;
     }
 
-    public static <T extends Comparable<T>> boolean isRepeatedCompareTo(T[] arr, T value){
-        int counter = 0;
-        for(T element : arr){
-            if(element.compareTo(value) == 0){
-                counter++;
-                if(counter > 1)
-                    return true;
-            }
-        }
-        return false;
-    }
     public static void main(String[] args) {
-
 
     }
 }
