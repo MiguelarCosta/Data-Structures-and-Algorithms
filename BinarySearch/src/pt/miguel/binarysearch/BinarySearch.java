@@ -38,22 +38,24 @@ public class BinarySearch {
      *
      * @param arr    The sorted array to search.
      * @param target The value to search for.
+     * @param start The index of the first element on the search space.
+     * @param end   The index of the last element on the search space.
      * @return The index of the target if found, -1 otherwise.
      */
-    public static int recursiveSearch(int[]arr, int target){
-        if(arr == null || arr.length == 0){
+    public static int recursiveSearch(int[]arr, int target, int start, int end){
+        if(arr == null || arr.length == 0 || start>end || end>arr.length || start < 0 ){
             return -1;
         }
 
-        int mid = arr.length/2;
+        int mid = (start+end)/2;
         if(arr[mid] == target){
             return mid;
         }
 
         if(arr[mid]<target)
-            return recursiveSearch(Arrays.copyOfRange(arr,mid+1,arr.length), target);
+            return recursiveSearch(arr,target,mid+1,end);
         else
-            return recursiveSearch(Arrays.copyOfRange(arr,0,mid), target);
+            return recursiveSearch(arr, target, start, mid-1);
 
     }
 

@@ -72,6 +72,8 @@ public class Main {
             System.out.println("Interval ["+lim_inf+","+lim_sup+"]: Contains " +nElements + " elements.");
         }
 
+        System.out.println(BinarySearch.recursiveSearch(arr,3,0,arr.length));
+
 
     }
 
